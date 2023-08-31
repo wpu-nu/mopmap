@@ -1,6 +1,6 @@
-dash==2.13.0
-dash-bootstrap-components==1.4.2
-dash-extensions==1.0.3
-dash-leaflet==1.0.7
-dash-table==5.0.0
-pudb==2021.1
+dash
+dash-bootstrap-components
+dash-extensions
+dash-leaflet
+dash-table
+pudb
