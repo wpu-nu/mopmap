@@ -4,3 +4,4 @@ dash-extensions
 dash-leaflet
 dash-table
 pudb
+gunicorn
