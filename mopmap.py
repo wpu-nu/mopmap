@@ -36,17 +36,17 @@ time_slider_max = 500
 center_pos = [59.33662248750816, 18.06278754091279]
 
 actors = {
-            "LEN": {
-                "color": "#DD3333",
-                "positions": {
-                        0: [59.33662248750816, 18.06278754091279],
-                },
-            },
-            "SE": { 
-                "color": "#1133FF",
-                "positions": {
-                        0: [59.32662248750816, 18.16278754091279],
-                }}
+#             "LEN": {
+#                 "color": "#DD3333",
+#                 "positions": {
+#                         0: [59.33662248750816, 18.06278754091279],
+#                 },
+#             },
+#             "SE": { 
+#                 "color": "#1133FF",
+#                 "positions": {
+#                         0: [59.32662248750816, 18.16278754091279],
+#                 }}
         }
 
 dbc_css = "https://cdn.jsdelivr.net/gh/AnnMarieW/dash-bootstrap-templates/dbc.min.css"
