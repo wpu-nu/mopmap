@@ -9,6 +9,7 @@ from dash.exceptions import PreventUpdate
 from dash import dcc
 from dash import html
 from datetime import datetime, timedelta
+import flask
 import json
 
 def bp():
@@ -28,6 +29,8 @@ for i in range(-7, +7):
 
 pprint(timemarks)
 
+
+
 time_slider_min = -100
 time_slider_max = 500
 center_pos = [59.33662248750816, 18.06278754091279]
@@ -45,6 +48,12 @@ actors = {
                         0: [59.32662248750816, 18.16278754091279],
                 }}
         }
+
+dbc_css = "https://cdn.jsdelivr.net/gh/AnnMarieW/dash-bootstrap-templates/dbc.min.css"
+server = flask.Flask(__name__) # define flask app.server
+app = Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP, dbc_css], server=server)
+
+
 
 def get_position_at(delta_t, actor):
     
@@ -98,8 +107,8 @@ def get_position_at(delta_t, actor):
 
 markerEventHandlers = dict(move=assign("function(e, ctx){ctx.setProps({actor: e.target.options.id, moveend: [e.latlng.lat, e.latlng.lng]})}"))
 
-dbc_css = "https://cdn.jsdelivr.net/gh/AnnMarieW/dash-bootstrap-templates/dbc.min.css"
-app = Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP, dbc_css])
+
+
 
 app.layout = dbc.Container(
     className="dbc",
@@ -363,8 +372,9 @@ def save_positions_at_timestamp(n_clicks_save_pos, n_clicks_save_new, delta_t, m
 
 
 if __name__ == '__main__':
-    app.run(host='10.0.0.40',
-            #threaded=True,
-            port='8080',
+    app.run_server(
+        #host='10.0.0.40',
+        #threaded=True,
+        #port='8080',
             debug=True)
 
