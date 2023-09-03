@@ -1,7 +1,10 @@
 dash
 dash-bootstrap-components
+dash_mantine_components
 dash-extensions
 dash-leaflet
 dash-table
+dash-iconify
 pudb
 gunicorn
+dash_player
