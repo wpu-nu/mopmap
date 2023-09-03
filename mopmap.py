@@ -893,8 +893,9 @@ def save_positions_at_timestamp(n_clicks_save_pos, n_clicks_save_new_actor, n_cl
 
 if __name__ == '__main__':
     app.run_server(
-        host='10.0.0.40',
+        #host='10.0.0.40',
         #threaded=True,
-        port='8080',
-        debug=True)
+        #port='8080',
+        #debug=True
+        )
 
