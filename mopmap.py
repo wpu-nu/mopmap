@@ -895,7 +895,8 @@ if __name__ == '__main__':
     app.run_server(
         #host='10.0.0.40',
         #threaded=True,
-        #port='8080',
+        host="0.0.0.0",
+        port='80',
         #debug=True
         )
 
